@@ -1,0 +1,69 @@
+.flex-centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/************************margins*********************/
+
+/****************        Margin left        ******************/
+.margin-left-mini {
+  margin-left: 1rem;
+}
+
+.margin-left-small {
+  margin-left: 2rem;
+}
+
+.margin-left-large {
+  margin-left: 5rem;
+}
+
+.margin-left-huge {
+  margin-left: 8rem;
+}
+
+/****************        Margin top        ******************/
+.margin-top-small {
+  margin-top: 1.5rem;
+}
+
+.margin-top-md {
+  margin-top: 3rem;
+}
+
+.margin-top-huge {
+  margin-top: 8rem;
+}
+
+
+
+/****************        Margin bottom        ******************/
+.margin-bottom-small {
+  margin-bottom: 2rem;
+}
+
+.margin-bottom-md {
+  margin-bottom: 4rem;
+}
+
+.margin-bottom-large {
+  margin-bottom: 5rem;
+}
+
+.margin-bottom-huge {
+  margin-bottom: 8rem;
+}
+
+/*********************margin-right*****************************/
+
+.margin-right-small {
+  margin-right: 1.5rem;
+}
+
+/*****************************padding**********************************/
+
+.padding-large {
+  padding: 30px;
+}

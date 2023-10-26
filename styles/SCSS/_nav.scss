@@ -1,0 +1,192 @@
+nav#myNav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  padding-bottom: 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+
+
+
+  @include respond(sm) {
+    background-color: #083346;
+  }
+
+  a.logo {
+    @include respond(sm) {
+      margin-top: -10px;
+    }
+  }
+
+
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    @include respond(md) {
+
+      display: none;
+      position: absolute;
+      top: 55px;
+      background-color: #083346;
+      width: 100%;
+
+    }
+
+
+    li {
+      margin-right: 10px;
+      width: fit-content;
+
+      &:last-child {
+        margin-right: 50px;
+      }
+
+      a {
+        font-size: 2rem;
+        color: #fbff00;
+
+        @include respond(md) {
+          margin-bottom: 15px;
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          height: 2px;
+          width: inherit;
+          background: #f9fd00;
+          transition: all 0.4s ease;
+          transform: scale(0);
+          margin-top: 6px;
+        }
+
+        &:hover {
+          color: #fbff06;
+          transition: color 0.6s;
+
+          &::after {
+            transform: scale(1);
+
+          }
+        }
+      }
+    }
+
+    a.active {
+      &::after {
+        content: "";
+        display: block;
+        height: 2px;
+        background: #f9fd00;
+        transition: all 0.4s ease;
+        transform: scale(1);
+        margin-top: 4px;
+      }
+    }
+  }
+
+  ul.toggle-content {
+    @include respond(md) {
+      display: block;
+    }
+  }
+
+  a {
+    margin-left: 20px;
+    font-size: 2.5rem;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+
+  div#nav-hamburger {
+    width: 45px;
+    height: 40px;
+    position: relative;
+    margin-right: 25px;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    display: none;
+    border: 1px solid yellow;
+
+    margin-top: -5px;
+
+    @include respond(md) {
+
+      display: block;
+    }
+
+    @include respond(sm) {
+      width: 40px;
+      height: 35px;
+    }
+  }
+
+  #nav-hamburger span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 70%;
+    background: #fbff00;
+    border-radius: 9px;
+    opacity: 1;
+    left: 15%;
+
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+
+  #nav-hamburger span:nth-child(1) {
+    top: 6px;
+
+    @include respond(sm) {
+      top: 6px;
+    }
+  }
+
+  #nav-hamburger span:nth-child(2) {
+    top: 17px;
+
+    @include respond(sm) {
+      top: 15px;
+    }
+  }
+
+  #nav-hamburger span:nth-child(3) {
+    top: 28px;
+
+    @include respond(sm) {
+      top: 24px;
+    }
+  }
+
+  #nav-hamburger.open span:nth-child(1) {
+    top: 18px;
+    transform: rotate(135deg);
+  }
+
+  #nav-hamburger.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+
+  }
+
+  #nav-hamburger.open span:nth-child(3) {
+    top: 18px;
+    transform: rotate(-135deg);
+  }
+
+}
+
+.nav-colored {
+  background-color: #083346;
+  transition: all 1s;
+}

@@ -1,0 +1,108 @@
+#particles-js {
+  height: 100vh;
+  background-color: #0e0e19;
+  z-index: -1;
+
+
+}
+
+#Home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1%;
+  color: #f9fd00;
+  font-family: "Ubuntu", sans-serif;
+
+  .Hero {
+    transform: translateY(50vh);
+    position: relative;
+
+    span.hero-text1 {
+      font-size: 3rem;
+      text-align: center;
+
+      @include respond(sm) {
+        font-size: 2rem;
+        margin-left: 1rem;
+      }
+    }
+
+    h1 {
+      font-size: 8rem;
+      font-weight: 600;
+
+      @include respond(sm) {
+        font-size: 5rem;
+      }
+    }
+
+    span.hero-text2 {
+      font-size: 3rem;
+      text-decoration: underline;
+
+      @include respond(sm) {
+        font-size: 2rem;
+      }
+    }
+
+    .typed-cursor {
+      font-size: 3rem;
+      opacity: 0.7;
+    }
+
+    #Web-dev-text {
+      display: none;
+    }
+
+    div.icon-container {
+      i {
+        transition: all 0.6s;
+
+        &:hover {
+          transform: scale(1.5);
+          transition: all 0.7s;
+          margin-right: 1.2rem;
+          margin-left: 1.2rem;
+        }
+      }
+    }
+
+    div.scroll-down-container {
+      position: absolute;
+      top: 130%;
+      left: 47%;
+      color: white;
+
+      @include respond(sm) {
+        top: 150%;
+      }
+
+      @include respond(mini) {
+        top: 130%;
+      }
+
+      i#scroll {
+        position: absolute;
+        animation: scrolldown 1.4s infinite ease-in-out;
+
+
+        @keyframes scrolldown {
+          0% {
+            top: 20%;
+
+
+          }
+
+
+
+          100% {
+            top: 143%;
+
+          }
+        }
+      }
+    }
+
+  }
+}

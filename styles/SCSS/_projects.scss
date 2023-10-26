@@ -1,0 +1,170 @@
+section#Projects {
+  min-height: 100vh;
+
+
+
+  div.project-header {
+    flex-direction: column;
+
+    margin: 0 auto;
+
+    h1 {
+      font-size: 4.5rem;
+      font-weight: 600;
+
+      position: relative;
+      text-align: center;
+      padding-bottom: 25px;
+      margin-bottom: 2rem;
+      margin-top: 6.6rem;
+
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        width: 220px;
+        height: 3px;
+        background: black;
+        transform: translateX(-50%);
+      }
+
+      &:after {
+        content: "What i have Done";
+        position: absolute;
+        bottom: -12px;
+        left: 33%;
+        font-size: 18px;
+        color: #ece73c;
+        padding: 5px;
+        background: #fff;
+        transform: translateX(-23%);
+      }
+    }
+  }
+
+  .cards {
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 40px;
+    transition: border-radius 0.7s;
+
+    @include respond(sm) {
+      height: 300px;
+    }
+
+    @include respond(xs) {
+      height: 250px;
+    }
+  }
+
+  .card1,
+  .card2,
+  .card3,
+  .card4,
+  .card5,
+  .card6 {
+    div.bg-color {
+      opacity: 1;
+      position: absolute;
+      top: 95%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      background-color: #083346d2;
+      height: 10%;
+      width: 100%;
+      transition: all 1s;
+
+      @include respond(sm) {
+        top: 90%;
+      }
+
+      @include respond(xs) {
+        top: 92%;
+        height: 15%;
+      }
+
+      h2 {
+        transform: translateY(10px);
+        transition: all 0.7s;
+
+        @include respond(xs) {
+          font-size: 1.6rem;
+        }
+
+      }
+
+      div.project-details {
+        transform: translateY(120px);
+        font-size: 2rem;
+        width: 100%;
+        transition: transform 0.4s;
+
+        @include respond(xs) {
+          font-size: 1.6rem;
+        }
+
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .card1,
+  .card2,
+  .card3,
+  .card4,
+  .card5,
+  .card6 {
+    &:hover {
+      border-radius: 50px;
+      transition: all 0.8s;
+
+      div.bg-color {
+        height: 100%;
+        top: 50%;
+        background-color: #083346f3;
+        transition: all 0.8s;
+
+        h2 {
+          transform: translateY(130px);
+          transition: 0.7s;
+          transition-delay: 0.1s;
+
+          @include respond(xs) {
+            transform: translateY(50px);
+          }
+        }
+
+        div.project-details {
+          transform: translateY(140px);
+
+
+          @include respond(xs) {
+            transform: translateY(70px);
+          }
+
+
+          p.hide-xs {
+            @include respond(xs) {
+              display: none;
+            }
+          }
+        }
+
+        img {
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
