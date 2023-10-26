@@ -1,15 +1,4 @@
-  # Portfolio
-   My personal Porfolio Website
 
-
-      visit here :  https://portfolio-fawad97.vercel.app/
-
-
-
-     *Built using HTML, CSS, JS*
-
-
-     Below is the little details of each Section how i have acheived certain results using third party libraries
 
 
 1) **Landing** **Page** **or** **Home** **Section**
